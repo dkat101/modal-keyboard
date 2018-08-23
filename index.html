@@ -6,273 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 
     <title>Custom Keyboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control name" name="name" id="name" placeholder="Name" data-toggle="modal" data-target="#exampleModal" onclick="buttonTab('name');">
-                    </div>
-                    <div class="form-group">
-                        <label for="location">location</label>
-                        <input type="text" class="form-control location" name="location" id="location" placeholder="Location" data-toggle="modal" data-target="#exampleModal" onclick="buttonTab('location');">
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-                </form>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           class="form-control name"
+                           name="name" id="name"
+                           placeholder="Name"
+                           data-toggle="modal"
+                           data-target="#exampleModal">
+                </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2>Virtual Keyboard</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xs-12 ">
-                                        <textarea id="vText" name="vText" class="form-control" rows="3"></textarea>
-                                        <br>
-                                        <nav>
-                                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                                <a class="nav-item nav-link active" id="lower-tab" data-toggle="tab" href="#lower" role="tab" aria-controls="lower" aria-selected="true">Lower</a>
-                                                <a class="nav-item nav-link" id="upper-tab" data-toggle="tab" href="#upper" role="tab" aria-controls="upper" aria-selected="false">Upper</a>
-                                            </div>
-                                        </nav>
-                                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                                            <div class="tab-pane fade show active" id="lower" role="tabpanel" aria-labelledby="lower-tab">
-                                                <button id="btn_agrave" class="btn btn-light">&agrave;</button>
-                                                <button id="btn_aacute" class="btn btn-light">&aacute;</button>
-                                                <button id="btn_acirc" class="btn btn-light">&acirc;</button>
-                                                <button id="btn_auml" class="btn btn-light">&auml;</button>
-                                                <button id="btn_aogon" class="btn btn-light">&aogon;</button>
-                                                <button id="btn_aelig" class="btn btn-light">&aelig;</button>
-                                                <button id="btn_egrave" class="btn btn-light">&egrave;</button>
-                                                <button id="btn_eacute" class="btn btn-light">&eacute;</button>
-                                                <button id="btn_ecirc" class="btn btn-light">&ecirc;</button>
-                                                <button id="btn_euml" class="btn btn-light">&euml;</button>
-                                                <button id="btn_aring" class="btn btn-light">&aring;</button>
-                                                <br>
-                                                <br>
-                                                <button id="btn_yacute" class="btn btn-light">&yacute;</button>
-                                                <button id="btn_cdot" class="btn btn-light">&cdot;</button>
-                                                <button id="btn_ccedil" class="btn btn-light">&ccedil;</button>
-                                                <button id="btn_thorn" class="btn btn-light">&thorn;</button>
-                                                <button id="btn_Lstrok" class="btn btn-light">&Lstrok;</button>
-                                                <button id="btn_sup1" class="btn btn-light">&sup1;</button>
-                                                <button id="btn_iquest" class="btn btn-light">&iquest;</button>
-                                                <button id="btn_ntilde" class="btn btn-light">&ntilde;</button>
-                                                <button id="btn_Otilde" class="btn btn-light">&Otilde;</button>
-                                                <button id="btn_Odblac" class="btn btn-light">&Odblac;</button>
-                                                <button id="btn_eng" class="btn btn-light">&eng;</button>
-                                            </div>
-                                            <div class="tab-pane fade" id="upper" role="tabpanel" aria-labelledby="upper-tab">
-                                                <button id="btn_Agrave_" class="btn btn-light">&Agrave;</button>
-                                                <button id="btn_Aacute_" class="btn btn-light">&Aacute;</button>
-                                                <button id="btn_Acirc_" class="btn btn-light">&Acirc;</button>
-                                                <button id="btn_Auml_" class="btn btn-light">&Auml;</button>
-                                                <button id="btn_Aogon_" class="btn btn-light">&Aogon;</button>
-                                                <button id="btn_AElig_" class="btn btn-light">&AElig;</button>
-                                                <button id="btn_Egrave_" class="btn btn-light">&Egrave;</button>
-                                                <button id="btn_Eacute_" class="btn btn-light">&Eacute;</button>
-                                                <button id="btn_Ecirc_" class="btn btn-light">&Ecirc;</button>
-                                                <button id="btn_Euml_" class="btn btn-light">&Euml;</button>
-                                                <button id="btn_Eogon" class="btn btn-light">&Eogon;</button>
-                                                <br>
-                                                <br>
-                                                <button id="btn_micro_" class="btn btn-light">&micro;</button>
-                                                <button id="btn_Cdot_" class="btn btn-light">&Cdot;</button>
-                                                <button id="btn_Ccedil_" class="btn btn-light">&Ccedil;</button>
-                                                <button id="btn_ordm" class="btn btn-light">&ordm;</button>
-                                                <button id="btn_frac12" class="btn btn-light">&frac12;</button>
-                                                <button id="btn_iquest_" class="btn btn-light">&iquest;</button>
-                                                <button id="btn_Gdot" class="btn btn-light">&Gdot;</button>
-                                                <button id="btn_Hstrok" class="btn btn-light">&Hstrok;</button>
-                                                <button id="btn_Ntilde_" class="btn btn-light">&Ntilde;</button>
-                                                <button id="btn_Otilde_" class="btn btn-light">&Otilde;</button>
-                                                <button id="btn_ENG_" class="btn btn-light">&ENG;</button>
-                                            </div>
+                <div class="form-group">
+                    <label for="location">location</label>
+                    <input type="text"
+                           class="form-control location"
+                           name="location" id="location"
+                           placeholder="Location"
+                           data-toggle="modal"
+                           data-target="#exampleModal">
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade"
+             id="exampleModal"
+             tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Virtual Keyboard</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 ">
+                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active"
+                                           id="lower-tab"
+                                           data-toggle="tab"
+                                           href="#lower"
+                                           role="tab"
+                                           aria-controls="lower"
+                                           aria-selected="true">Lower</a>
+                                        <a class="nav-item nav-link"
+                                           id="upper-tab"
+                                           data-toggle="tab"
+                                           href="#upper"
+                                           role="tab"
+                                           aria-controls="upper"
+                                           aria-selected="false">Upper</a>
+                                    </div>
+
+                                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                        <div class="tab-pane fade show active"
+                                             id="lower"
+                                             role="tabpanel"
+                                             aria-labelledby="lower-tab">
+
+                                            <!--Follow this example and apply changes to other button -->
+                                            <button class="glyph btn btn-light" data-glyph="&agrave;">&agrave;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&aacute;">&aacute;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&acirc;">&acirc;</button>
+                                            <button class="glyph btn btn-light" data-glyph="&auml;">&auml;</button>
+
+                                            <!--other buttons-->
+                                            <button id="btn_aogon" class="btn btn-light">&aogon;</button>
+                                            <button id="btn_aelig" class="btn btn-light">&aelig;</button>
+                                            <button id="btn_egrave" class="btn btn-light">&egrave;</button>
+                                            <button id="btn_eacute" class="btn btn-light">&eacute;</button>
+                                            <button id="btn_ecirc" class="btn btn-light">&ecirc;</button>
+                                            <button id="btn_euml" class="btn btn-light">&euml;</button>
+                                            <button id="btn_aring" class="btn btn-light">&aring;</button>
+                                            <br>
+                                            <br>
+                                            <button id="btn_yacute" class="btn btn-light">&yacute;</button>
+                                            <button id="btn_cdot" class="btn btn-light">&cdot;</button>
+                                            <button id="btn_ccedil" class="btn btn-light">&ccedil;</button>
+                                            <button id="btn_thorn" class="btn btn-light">&thorn;</button>
+                                            <button id="btn_Lstrok" class="btn btn-light">&Lstrok;</button>
+                                            <button id="btn_sup1" class="btn btn-light">&sup1;</button>
+                                            <button id="btn_iquest" class="btn btn-light">&iquest;</button>
+                                            <button id="btn_ntilde" class="btn btn-light">&ntilde;</button>
+                                            <button id="btn_Otilde" class="btn btn-light">&Otilde;</button>
+                                            <button id="btn_Odblac" class="btn btn-light">&Odblac;</button>
+                                            <button id="btn_eng" class="btn btn-light">&eng;</button>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="upper" role="tabpanel"
+                                             aria-labelledby="upper-tab">
+                                            <button id="btn_Agrave_" class="btn btn-light">&Agrave;</button>
+                                            <button id="btn_Aacute_" class="btn btn-light">&Aacute;</button>
+                                            <button id="btn_Acirc_" class="btn btn-light">&Acirc;</button>
+                                            <button id="btn_Auml_" class="btn btn-light">&Auml;</button>
+                                            <button id="btn_Aogon_" class="btn btn-light">&Aogon;</button>
+                                            <button id="btn_AElig_" class="btn btn-light">&AElig;</button>
+                                            <button id="btn_Egrave_" class="btn btn-light">&Egrave;</button>
+                                            <button id="btn_Eacute_" class="btn btn-light">&Eacute;</button>
+                                            <button id="btn_Ecirc_" class="btn btn-light">&Ecirc;</button>
+                                            <button id="btn_Euml_" class="btn btn-light">&Euml;</button>
+                                            <button id="btn_Eogon" class="btn btn-light">&Eogon;</button>
+                                            <br>
+                                            <br>
+                                            <button id="btn_micro_" class="btn btn-light">&micro;</button>
+                                            <button id="btn_Cdot_" class="btn btn-light">&Cdot;</button>
+                                            <button id="btn_Ccedil_" class="btn btn-light">&Ccedil;</button>
+                                            <button id="btn_ordm" class="btn btn-light">&ordm;</button>
+                                            <button id="btn_frac12" class="btn btn-light">&frac12;</button>
+                                            <button id="btn_iquest_" class="btn btn-light">&iquest;</button>
+                                            <button id="btn_Gdot" class="btn btn-light">&Gdot;</button>
+                                            <button id="btn_Hstrok" class="btn btn-light">&Hstrok;</button>
+                                            <button id="btn_Ntilde_" class="btn btn-light">&Ntilde;</button>
+                                            <button id="btn_Otilde_" class="btn btn-light">&Otilde;</button>
+                                            <button id="btn_ENG_" class="btn btn-light">&ENG;</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="js/jquery-1.10.2.min.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script>
-        $('.name, .location').on('shown.bs.modal', function () {
-            //$('#myInput').trigger('focus');
-        });
+<script src="js/jquery-1.10.2.min.js" ></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $('.name, .location').on('shown.bs.modal', function () {
+        //$('#myInput').trigger('focus');
+    })
 
-        function buttonTab(element, event) {
-            console.log('clicked ' + $(event.target.nodeName));
-            //$(event.target.id).val($('#' + element).val() + '\u00E0');
-            $( "#vText" ).html( "clicked: " + event.target.nodeName )
-            //$('#' + element).val($('#' + element).val() + '\u00E1');
-            $('#btn_agrave').click(function () {
-                //$(event.target.id).val($('#' + element).val() + '\u00E0');
-                $('#vText').val($('#vText').val() + '\u00E0');
-            });
-            $('#btn_aacute').click(function () {
-                $('#vText').val($('#vText').val() + '\u00E1');
-            });
-            $('#btn_acirc').click(function () {
-                $('#vText').val($('#vText').val() + '\u00E2');
-            });
-            $('#btn_auml').click(function () {
-                $('#vText').val($('#vText').val() + '\u00E4');
-            });
-            $('#btn_aogon').click(function () {
-                $('#vText').val($('#vText').val() + '\u0105');
-            });
-            $('#btn_aelig').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C6');
-            });
-            $('#btn_egrave').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C8');
-            });
-            $('#btn_eacute').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C9');
-            });
-            $('#btn_ecirc').click(function () {
-                $('#vText').val($('#vText').val() + '\u00EA');
-            });
-            $('#btn_euml').click(function () {
-                $('#vText').val($('#vText').val() + '\u00EB');
-            });
-            $('#btn_aring').click(function () {
-                $('#vText').val($('#vText').val() + '\u00E5');
-            });
-            $('#btn_yacute').click(function () {
-                $('#vText').val($('#vText').val() + '\u00FD');
-            });
-            $('#btn_cdot').click(function () {
-                $('#vText').val($('#vText').val() + '\u010B');
-            });
-            $('#btn_ccedil').click(function () {
-                $('#vText').val($('#vText').val() + '\u00E7');
-            });
-            $('#btn_thorn').click(function () {
-                $('#vText').val($('#vText').val() + '\u00FE');
-            });
-            $('#btn_Lstrok').click(function () {
-                $('#vText').val($('#vText').val() + '\u0141');
-            });
-            $('#btn_sup1').click(function () {
-                $('#vText').val($('#vText').val() + '\u00B9');
-            });
-            $('#btn_iquest').click(function () {
-                $('#vText').val($('#vText').val() + '\u00BF');
-            });
-            $('#btn_ntilde').click(function () {
-                $('#vText').val($('#vText').val() + '\u00F1');
-            });
-            $('#btn_Otilde').click(function () {
-                $('#vText').val($('#vText').val() + '\u00D5');
-            });
-            $('#btn_Odblac').click(function () {
-                $('#vText').val($('#vText').val() + '\u0150');
-            });
-            $('#btn_eng').click(function () {
-                $('#vText').val($('#vText').val() + '\u014B');
-            });
-            $('#btn_Agrave_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C0');
-            });
-            $('#btn_Aacute_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C1');
-            });
-            $('#btn_Acirc_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C2');
-            });
-            $('#btn_Auml_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C4');
-            });
-            $('#btn_Aogon_').click(function () {
-                $('#vText').val($('#vText').val() + '\u0104');
-            });
-            $('#btn_AElig_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C6');
-            });
-            $('#btn_Egrave_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C8');
-            });
-            $('#btn_Eacute_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C9');
-            });
-            $('#btn_Ecirc_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00CA');
-            });
-            $('#btn_Euml_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00CB');
-            });
-            $('#btn_Eogon').click(function () {
-                $('#vText').val($('#vText').val() + '\u0118');
-            });
-            $('#btn_micro_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00B5');
-            });
-            $('#btn_Cdot_').click(function () {
-                $('#vText').val($('#vText').val() + '\u010A');
-            });
-            $('#btn_Ccedil_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00C7');
-            });
-            $('#btn_ordm').click(function () {
-                $('#vText').val($('#vText').val() + '\u00BA');
-            });
-            $('#btn_frac12').click(function () {
-                $('#vText').val($('#vText').val() + '\u00BD');
-            });
-            $('#btn_iquest_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00BF');
-            });
-            $('#btn_Gdot').click(function () {
-                $('#vText').val($('#vText').val() + '\u0120');
-            });
-            $('#btn_Hstrok').click(function () {
-                $('#vText').val($('#vText').val() + '\u0126');
-            });
-            $('#btn_Ntilde_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00D1');
-            });
-            $('#btn_Otilde_').click(function () {
-                $('#vText').val($('#vText').val() + '\u00D5');
-            });
-            $('#btn_ENG_').click(function () {
-                $('#vText').val($('#vText').val() + '\u014A');
-            });
-        }
+    var selectedInput
+    /**
+     * We you click on the input[.form-control], set the element.
+     */
+    $('.form-control').click(function () {
+        selectedInput = $(this)
+    })
 
-        function getFieldContent(element) {
-            $('#vText').val($('#' + element).val());
-        }
+    /**
+     * Get the data-glyph attribute and append it to the selected Input value
+     */
+    $('.glyph').click(function () {
+        selectedInput.val(selectedInput.val() + $(this).attr('data-glyph'))
+    })
+</script>
 
-        function setFieldContent(element) {
-            $('#' + element).val($('#vText').val());
-            $('#vText').val('');
-        }
-    </script>
 </body>
 </html>
